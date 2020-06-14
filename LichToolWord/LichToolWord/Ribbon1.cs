@@ -156,6 +156,10 @@ namespace LichToolWord
             if (paragraph.CharacterUnitLeftIndent > 0)
                 return null;
 
+            object isTable = paragraph.Range.Information[WdInformation.wdWithInTable];
+            if (isTable != null && (bool) isTable == true)
+                return null;
+
             string text = paragraph.Range.Text;
             Match match = regexNumPart.Match(text);
             if (match.Success)
