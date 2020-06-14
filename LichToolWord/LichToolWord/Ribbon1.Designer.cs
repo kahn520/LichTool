@@ -38,6 +38,7 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.btnReplaceTitle = this.Factory.CreateRibbonButton();
             this.btnSaveAsDocx = this.Factory.CreateRibbonButton();
+            this.btnFixNum = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             this.group1.Items.Add(this.btnReplaceTitle);
             this.group1.Items.Add(this.btnSaveAsDocx);
+            this.group1.Items.Add(this.btnFixNum);
             this.group1.Label = "lich";
             this.group1.Name = "group1";
             // 
@@ -67,6 +69,12 @@
             this.btnSaveAsDocx.Label = "保存为Docx";
             this.btnSaveAsDocx.Name = "btnSaveAsDocx";
             this.btnSaveAsDocx.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSaveAsDocx_Click);
+            // 
+            // btnFixNum
+            // 
+            this.btnFixNum.Label = "修复试卷编号";
+            this.btnFixNum.Name = "btnFixNum";
+            this.btnFixNum.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnFixNum_Click);
             // 
             // Ribbon1
             // 
@@ -88,6 +96,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnReplaceTitle;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnSaveAsDocx;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnFixNum;
     }
 
     partial class ThisRibbonCollection
